@@ -9,23 +9,29 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import RenderCards from '../components/renderCards';
+
 const PageAuthors = () => {
-  const [variable, setVariable] = useState(); // define your state
+  const [authors, setAuthors] = useState([]);
 
   useEffect(()=>{
-    defineFunctions();
+    fetchAuthors();
   },[]);
 
-  const defineFunctions = () => {
+  const fetchAuthors = async () => {
     try {
-      // call your apis here
+      const response = await axios.get('/api/authors');
+      setAuthors(response.data)
     } catch(error) {
-      console.error('Error fetching books:', error);
+      console.error('Error fetching authors:', error);
     }
   }
 
   return (
-    <Container fluid>this is the authors page</Container>
+    <Container fluid>this is the authors page, test
+    {RenderCards(authors, "Authors")}
+    </Container>
+
     // you can call your setVariable here etc; or defineFunctions() here
   )
   };
