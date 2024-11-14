@@ -1,3 +1,5 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,8 +13,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
+  /* Use flexbox to align content to the top */
+  /* display: flex;
+  flex-direction: column;
+  height: 100%; */
+}
+  
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,7 +32,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* place-items: center; */ /* this puts it in the middle of the page vertical-wise*/
   min-width: 320px;
   min-height: 100vh;
 }

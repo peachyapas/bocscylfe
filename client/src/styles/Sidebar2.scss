@@ -1,0 +1,100 @@
+// src/components/Sidebar.scss
+
+div .row {
+    margin-left: 0px;
+}
+.sidebar-column {
+    padding: 0;
+    overflow-y: auto; /* Allow scrolling if the sidebar content overflows */
+    height: 100vh; /* Full viewport height */
+    background-color: #f8f9fa; /* Optional: Add a sidebar background color */
+}
+
+.content-column {
+    padding: 0;
+    overflow-y: auto;
+    height: 100vh; /* Full viewport height */
+}
+
+.navbar-self {
+    width: 100%;
+    z-index: 1000;
+}
+
+.content {
+    padding: 20px; /* Adds padding to avoid touching edges */
+    overflow-y: auto; /* Prevents content overflow */
+    height: calc(100vh - 56px); /* Adjust based on the navbar height */
+}
+
+
+.sidebar {
+    background-color: #343a40;  // Dark background for sidebar
+    height: 100vh;  // Full height of viewport
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+
+.sidebar .nav-link {
+    color: #ffffff;  // White text for links
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;  // Slightly lighter background on hover
+    color: #ffffff;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;  // Space between icon and text
+}
+
+.sidebar .active {
+    background-color: #E8A2A2;
+}
+
+.sidebar {
+    .active-nav {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: bold;
+    }
+    .active-subitem {
+        background-color: #0056b3;
+        color: #fff;
+        padding-left: 20px; // Indent sub-items if needed
+    }
+    .submenu {
+        padding-left: 20px;
+        background-color: #282E33;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        // border-radius: 5px;
+    }
+
+    .subitem {
+        color: #D4D4D4;
+        padding: 5px 0;
+    }
+
+    .subitem:hover {
+        color: #ffffff;
+        background-color: #495057;
+        border-radius: 3px;
+    }
+
+    .dropdown-arrow {
+        transition: transform 0.3s ease;
+        font-size: 0.9em;
+        color: white;
+    }
+
+    /* Rotate the arrow when expanded */
+    .bi-chevron-down.dropdown-arrow {
+        transform: rotate(180deg);
+    }
+}
+

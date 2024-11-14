@@ -1,0 +1,189 @@
+/* App.css */
+
+/* .container {
+  margin-left:0px;
+} */
+
+/* for testing */
+/* * {border:1px solid red;} */
+
+
+#root {
+  overflow-x: hidden !important;   /* Prevents horizontal scrolling */
+}
+
+div .container-fluid {
+  /* margin-right:20px; */
+  padding-right:10px;
+
+}
+/* 
+.row .content { 
+  width: 95% !important;
+} */
+
+* { 
+  font-size: 0.9rem;
+}
+
+label[for="orderDeliveryTimeRange"] {
+  padding-top: 2rem;
+  /* background-color: yellow; */
+}
+
+div[class="MuiFormControl-root MuiTextField-root css-z3c6am-MuiFormControl-root-MuiTextField-root"] {
+  padding-top:1.5rem;
+}
+
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;  /* Fixed sidebar width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #343a40;
+  z-index: 1000;  /* Ensure sidebar is above content */
+}
+
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  /* margin-left:250px; */
+  z-index: 1020; /* Ensure navbar is on top */
+}
+
+
+nav.navbar-custom.bg-body-tertiary.fixed-top.navbar.navbar-expand-lg.navbar-light {
+  left: 250px !important;
+  width: calc(100% - 250px); /* Adjust the navbar to the remaining width */
+}
+
+
+
+
+
+body {
+  padding-top: 60px;
+  display:flex;
+  width:100%;
+  /* justify-content: center; */
+  /* padding: 0;
+  margin: 0; */
+}
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 60px;
+  }
+}
+.table{
+  padding-top: 0;
+  word-break: break-word;
+}
+.table-header {
+  border: 1px solid black !important;
+  padding: 10px;
+  width: 100px;
+}
+
+#th {
+  width: 30px;
+}
+
+.table-data{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.table-self{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* table {
+  border-collapse: collapse !important;
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+table th, table td{
+  border: 1px solid #ddd !important;
+  padding: 8px !important;
+} */
+
+div .container-fluid {
+  /* padding: 5rem; */
+  /* width:100%; */
+  /* display: flex; */
+  justify-content: space-evenly;
+}
+
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 1rem; */
+  display: flex;
+  /* justify-content: center; */
+  width:100%;
+  /* text-align: center; */
+  background-color:white;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* Ensure content stays responsive on smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100px;  /* Narrower sidebar for small screens */
+  }
+  
+  /* .navbar-custom {
+    margin-left: 100px; 
+    width: calc(100% - 100px);
+  } */
+
+  .content {
+    margin-left: 100px;  /* Adjust to match the new sidebar width */
+    width: calc(100% - 100px);
+  }
+}
